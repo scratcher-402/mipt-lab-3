@@ -1,7 +1,8 @@
 #include <stdio.h>
 #include "main.h"
 
-void matrix_of_slopes (size_t N, position *ship, fig triangle, position port, double (*slopes)[4]) {
+void matrix_of_slopes(size_t N, position *ship, fig triangle, position port, double (*slopes)[4]) 
+{
     double port_longitude = port.longitude.degree + (port.longitude.minute) / 60 + (port.longitude.second) / 3600;
     double port_lat = port.lat.degree + (port.lat.minute) / 60 + (port.lat.second) / 3600;
     double apex1_longitude = triangle.apex1.longitude.degree + (triangle.apex1.longitude.minute) / 60 + (triangle.apex1.longitude.second) / 3600;
