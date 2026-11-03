@@ -1,26 +1,26 @@
 #include <stdio.h>
 
-struct coordinates
+typedef struct coordinates
 {   
     int degree;
     int minute;
     int second;
-};
+} coordinates;
 
-struct position
+typedef struct position
 { 
     struct coordinates lat;
     struct coordinates longitude;
-};
+} position;
 
-struct fig
+typedef struct fig
 {
     struct position apex1;
     struct position apex2;
     struct position apex3;
-};
+} fig;
 
-void matrix_of_slopes (size_t N, struct position *ship, struct fig triangle, struct position port, double (*slopes)[4]) {
+void matrix_of_slopes (size_t N, position *ship, fig triangle, position port, double (*slopes)[4]) {
     double port_longitude = port.longitude.degree + (port.longitude.minute) / 60 + (port.longitude.second) / 3600;
     double port_lat = port.lat.degree + (port.lat.minute) / 60 + (port.lat.second) / 3600;
     double apex1_longitude = triangle.apex1.longitude.degree + (triangle.apex1.longitude.minute) / 60 + (triangle.apex1.longitude.second) / 3600;
@@ -43,8 +43,4 @@ void matrix_of_slopes (size_t N, struct position *ship, struct fig triangle, str
         slopes[i][2] = apex3_lambda;
         slopes[i][3] = port_lambda;
     }
-}
-
-int main() {
-    return 0;
 }
