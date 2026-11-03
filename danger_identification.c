@@ -10,7 +10,7 @@ void danger_identification(size_t N, double (*slopes)[4], int *danger){
             }
 
             for (int m = l + 1; m < 3; m++) {
-                if (slopes[i][l] <= slopes[i][3] && slopes[i][3] <= slopes[i][m]) {
+                if ((slopes[i][l] <= slopes[i][3] && slopes[i][3] <= slopes[i][m]) || (slopes[i][m] <= slopes[i][3] && slopes[i][3] <= slopes[i][l])) {
                     k = 1;
                 }
             }
