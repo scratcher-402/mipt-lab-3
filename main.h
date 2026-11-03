@@ -27,6 +27,6 @@ position input_port();
 
 void matrix_of_slopes(size_t N, position *ship, fig triangle, position port, double (*slopes)[4]);
 
-void danger_identification(size_t N, float (*slopes)[4], int *danger);
+void danger_identification(size_t N, double (*slopes)[4], int *danger);
 
 void danger_signal(size_t N, int *danger);
