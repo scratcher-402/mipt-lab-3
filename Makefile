@@ -4,7 +4,7 @@ SRCS = $(wildcard *.c)
 
 all: $(TARGET)
 
-$(TARGET):
+$(TARGET): $(SRCS)
 	$(CC) $(SRCS) -o $@
 
 clean:
