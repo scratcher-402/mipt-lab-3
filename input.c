@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdio.h>
 
 void input_ship(size_t N, position *ship)
 {
