@@ -1,4 +1,6 @@
-void danger_identification (int N, float (*slopes)[4], int *danger) {
+#include "main.h"
+
+void danger_identification(size_t N, float (*slopes)[4], int *danger){
     for (int i = 0; i < N; i++) {
         int k = 0;
 
@@ -20,4 +22,5 @@ void danger_identification (int N, float (*slopes)[4], int *danger) {
             danger[i] = 0;
         }
     }
+    return;
 }
