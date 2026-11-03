@@ -1,17 +1,6 @@
 #include <stdio.h>
 #include "main.h"
 
-<<<<<<< Updated upstream
-void matrix_of_slopes (size_t N, position *ship, fig triangle, position port, double (*slopes)[4]) {
-    double port_longitude = port.longitude.degree + (port.longitude.minute) / 60 + (port.longitude.second) / 3600;
-    double port_lat = port.lat.degree + (port.lat.minute) / 60 + (port.lat.second) / 3600;
-    double apex1_longitude = triangle.apex1.longitude.degree + (triangle.apex1.longitude.minute) / 60 + (triangle.apex1.longitude.second) / 3600;
-    double apex1_lat = triangle.apex1.lat.degree + (triangle.apex1.lat.minute) / 60 + (triangle.apex1.lat.second) / 3600;
-    double apex2_longitude = triangle.apex2.longitude.degree + (triangle.apex2.longitude.minute) / 60 + (triangle.apex2.longitude.second) / 3600;
-    double apex2_lat = triangle.apex2.lat.degree + (triangle.apex2.lat.minute) / 60 + (triangle.apex2.lat.second) / 3600;
-    double apex3_longitude = triangle.apex3.longitude.degree + (triangle.apex3.longitude.minute) / 60 + (triangle.apex3.longitude.second) / 3600;
-    double apex3_lat = triangle.apex3.lat.degree + (triangle.apex3.lat.minute) / 60 + (triangle.apex3.lat.second) / 3600;
-=======
 void matrix_of_slopes(size_t N, position *ship, fig triangle, position port, double (*slopes)[4]) 
 {
     double port_longitude = (double)port.longitude.degree + (double)(port.longitude.minute) / 60 + (double)(port.longitude.second) / 3600;
@@ -22,7 +11,6 @@ void matrix_of_slopes(size_t N, position *ship, fig triangle, position port, dou
     double apex2_lat = (double)triangle.apex2.lat.degree + (double)(triangle.apex2.lat.minute) / 60 + (double)(triangle.apex2.lat.second) / 3600;
     double apex3_longitude = (double)triangle.apex3.longitude.degree + (double)(triangle.apex3.longitude.minute) / 60 + (double)(triangle.apex3.longitude.second) / 3600;
     double apex3_lat = (double)triangle.apex3.lat.degree + (double)(triangle.apex3.lat.minute) / 60 + (triangle.apex3.lat.second) / 3600;
->>>>>>> Stashed changes
 
     for (size_t i = 0; i < N; i++) {
         double ship_longitude = (double)ship[i].longitude.degree + (double)(ship[i].longitude.minute) / 60 + (double)(ship[i].longitude.second) / 3600;
