@@ -10,7 +10,7 @@ void matrix_of_slopes(size_t N, position *ship, fig triangle, position port, dou
     double apex2_longitude = (double)triangle.apex2.longitude.degree + (double)(triangle.apex2.longitude.minute) / 60 + (double)(triangle.apex2.longitude.second) / 3600;
     double apex2_lat = (double)triangle.apex2.lat.degree + (double)(triangle.apex2.lat.minute) / 60 + (double)(triangle.apex2.lat.second) / 3600;
     double apex3_longitude = (double)triangle.apex3.longitude.degree + (double)(triangle.apex3.longitude.minute) / 60 + (double)(triangle.apex3.longitude.second) / 3600;
-    double apex3_lat = (double)triangle.apex3.lat.degree + (double)(triangle.apex3.lat.minute) / 60 + (triangle.apex3.lat.second) / 3600;
+    double apex3_lat = (double)triangle.apex3.lat.degree + (double)(triangle.apex3.lat.minute) / 60 + (double)(triangle.apex3.lat.second) / 3600;
 
     for (size_t i = 0; i < N; i++) {
         double ship_longitude = (double)ship[i].longitude.degree + (double)(ship[i].longitude.minute) / 60 + (double)(ship[i].longitude.second) / 3600;
