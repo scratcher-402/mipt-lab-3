@@ -1,15 +1,5 @@
 #pragma once
-
-void input_ship(int N, position* ship);
-fig input_triangle();
-void input_triangle (fig* triangle);
-position input_port();
-
-void matrix_of_slopes(int N, position *ship, fig triangle, position port, float (*slopes)[4]);
-
-void danger_identification (int N, float (*slopes)[4], int *danger);
-
-void danger_signal (int N, int *danger);
+#include <stdlib.h>
 
 typedef struct coordinates
 {
@@ -30,3 +20,13 @@ typedef struct fig
     position apex2;
     position apex3;
 } fig;
+
+void input_ship(size_t N, position* ship);
+fig input_triangle();
+position input_port();
+
+void matrix_of_slopes(size_t N, position *ship, fig triangle, position port, double (*slopes)[4]);
+
+void danger_identification(size_t N, float (*slopes)[4], int *danger);
+
+void danger_signal(size_t N, int *danger);
