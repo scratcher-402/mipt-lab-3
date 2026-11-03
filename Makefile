@@ -1,6 +1,8 @@
 CC = gcc
 TARGET = lab3
 SRCS = $(wildcard *.c)
+TEST_DIR = tests
+TEST_FILES = $(wildcard $(TEST_DIR)/*)
 
 all: $(TARGET)
 
@@ -10,4 +12,11 @@ $(TARGET): $(SRCS)
 clean:
 	rm -rf $(TARGET)
 
-.PHONY: all clean
+test: $(TARGET)
+	@for file in $(TEST_FILES); do \
+		echo "----------------------------------------"; \
+		echo "Running test: $$file"; \
+		./$(TARGET) < "$$file"; \
+	done
+
+.PHONY: all clean test
