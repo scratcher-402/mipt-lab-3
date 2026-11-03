@@ -1,7 +1,7 @@
 #include "main.h"
 
-void danger_identification(size_t N, float (*slopes)[4], int *danger){
-    for (int i = 0; i < N; i++) {
+void danger_identification(size_t N, double (*slopes)[4], int *danger){
+    for (size_t i = 0; i < N; i++) {
         int k = 0;
 
         for (int l = 0; l < 3; l++) {
