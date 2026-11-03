@@ -1,0 +1,26 @@
+#include "main.h"
+
+void danger_identification(size_t N, double (*slopes)[4], int *danger){
+    for (size_t i = 0; i < N; i++) {
+        int k = 0;
+
+        for (int l = 0; l < 3; l++) {
+            if (k == 1) {
+                break;
+            }
+
+            for (int m = l + 1; m < 3; m++) {
+                if ((slopes[i][l] <= slopes[i][3] && slopes[i][3] <= slopes[i][m]) || (slopes[i][m] <= slopes[i][3] && slopes[i][3] <= slopes[i][l])) {
+                    k = 1;
+                }
+            }
+        }
+
+        if (k==1) {
+            danger[i] = 1;
+        } else {
+            danger[i] = 0;
+        }
+    }
+    return;
+}
