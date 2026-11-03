@@ -1,24 +1,5 @@
 #include <stdio.h>
-
-typedef struct coordinates
-{   
-    int degree;
-    int minute;
-    int second;
-} coordinates;
-
-typedef struct position
-{ 
-    struct coordinates lat;
-    struct coordinates longitude;
-} position;
-
-typedef struct fig
-{
-    struct position apex1;
-    struct position apex2;
-    struct position apex3;
-} fig;
+#include "main.h"
 
 void matrix_of_slopes (size_t N, position *ship, fig triangle, position port, double (*slopes)[4]) {
     double port_longitude = port.longitude.degree + (port.longitude.minute) / 60 + (port.longitude.second) / 3600;
