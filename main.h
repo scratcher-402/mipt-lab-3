@@ -2,14 +2,14 @@
 
 void input_ship(int N, position* ship);
 fig input_triangle();
-void input_triangle (fig* triangle);
+void input_triangle(fig* triangle);
 position input_port();
 
 void matrix_of_slopes(int N, position *ship, fig triangle, position port, float (*slopes)[4]);
 
-void danger_identification (int N, float (*slopes)[4], int *danger);
+void danger_identification(int N, float (*slopes)[4], int *danger);
 
-void danger_signal (int N, int *danger);
+void danger_signal(int N, int *danger);
 
 typedef struct coordinates
 {
