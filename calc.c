@@ -1,7 +1,11 @@
 #include <stdio.h>
 #include "main.h"
 
+<<<<<<< HEAD
 void matrix_of_slopes(const size_t N, position *ship, fig triangle, position port, double (*slopes)[4]) 
+=======
+void matrix_of_slopes(size_t N, position *ship, fig triangle, position port, double (*slopes)[4]) 
+>>>>>>> 64d8b2620e73a013a98811727cdc245250faa616
 {
     double port_longitude = (double)port.longitude.degree + (double)(port.longitude.minute) / 60 + (double)(port.longitude.second) / 3600;
     double port_lat = (double)port.lat.degree + (double)(port.lat.minute) / 60 + (double)(port.lat.second) / 3600;
