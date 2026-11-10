@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-void danger_signal(size_t N, int *danger) {
+void danger_signal(const size_t N, int *danger) {
     FILE *tty = fopen("/dev/tty", "r");
     if (tty == NULL) {
         tty = stdin;

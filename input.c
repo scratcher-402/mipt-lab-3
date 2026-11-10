@@ -1,7 +1,7 @@
 #include "main.h"
 #include <stdio.h>
 
-void input_ship(size_t N, position *ship)
+void input_ship(const size_t N, position *ship)
 {
     int d, m, c;
     coordinates lat;
