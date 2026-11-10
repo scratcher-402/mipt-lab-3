@@ -3,7 +3,7 @@
 
 int main()
 {
-    size_t N;
+    const size_t N;
     position ship[50];
     fig triangle;
     position port;
