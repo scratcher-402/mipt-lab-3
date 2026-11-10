@@ -1,6 +1,30 @@
 #include "main.h"
 #include <stdio.h>
 
+int check(size_t x, size_t n_max) {
+    if (x <= n_max) {
+        return 1;
+    } else {
+        return 0;
+    }
+}
+
+int bad_lat(size_t d, size_t m, size_t c) {
+    if (!(check(c, 60) && check(m, 60) && check(d, 90))) {
+        return 1;
+    } else {
+        return 0;
+    }
+}
+
+int bad_long(size_t d, size_t m, size_t c) {
+    if (!(check(c, 60) && check(m, 60) && check(d, 180))) {
+        return 1;
+    } else {
+        return 0;
+    }
+}
+
 void input_ship(size_t N, position *ship)
 {
     int d, m, c;
@@ -14,7 +38,7 @@ void input_ship(size_t N, position *ship)
         while (flag == 1) {
             scanf ("%d%d%d", &d, &m, &c);
             flag = 0;
-            if (c > 60 || c < 0 || m > 60 || m < 0 || d > 90 || d < 0) {
+            if (bad_lat(d, m, c)) {
                 flag = 1;
                 printf ("Введите корректные значения\n");
             } else {
@@ -27,7 +51,7 @@ void input_ship(size_t N, position *ship)
         while (flag == 1) {
             scanf ("%d%d%d", &d, &m, &c);
             flag = 0;
-            if (c > 60 || c < 0 || m > 60 || m < 0 || d > 180 || d < 0) {
+            if (bad_long(d, m, c)) {
                 flag = 1;
                 printf ("Введите корректные значения\n");
             } else {
@@ -56,7 +80,7 @@ fig input_triangle()
         while (flag == 1) {
             scanf ("%d%d%d", &d, &m, &c);
             flag = 0;
-            if (c > 60 || c < 0 || m > 60 || m < 0 || d > 90 || d < 0) {
+            if (bad_lat(d, m, c)) {
                 flag = 1;
                 printf ("Введите корректные значения\n");
             } else {
@@ -69,7 +93,7 @@ fig input_triangle()
         while (flag == 1) {
             scanf ("%d%d%d", &d, &m, &c);
             flag = 0;
-            if (c > 60 || c < 0 || m > 60 || m < 0 || d > 180 || d < 0) {
+            if (bad_long(d, m, c)) {
                 flag = 1;
                 printf("Введите корректные значения\n");
             } else {
@@ -95,7 +119,7 @@ position input_port()
     while (flag == 1) {
         scanf ("%d%d%d", &d, &m, &c);
         flag = 0;
-        if (c > 60 || c < 0 || m > 60 || m < 0 || d > 90 || d < 0) {
+        if (bad_lat(d, m, c)) {
             flag = 1;
             printf ("Введите корректные значения\n");
         } else {
@@ -108,7 +132,7 @@ position input_port()
     while (flag == 1) {
         scanf ("%d%d%d", &d, &m, &c);
         flag = 0;
-        if (c > 60 || c < 0 || m > 60 || m < 0 || d > 180 || d < 0) {
+        if (bad_long(d, m, c)) {
             flag = 1;
             printf ("Введите корректные значения\n");
         } else {
